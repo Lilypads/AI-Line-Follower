@@ -20,14 +20,18 @@ Install ROS:
 
 4. Install the Ros Desktop
 
-	sudo apt install ros-melodic-desktop
+        sudo apt install ros-melodic-desktop
 
-5. Initialize ROS
+5. Set your environment variables
 
+        echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+        source ~/.bashrc
+
+6. Initialize ROS
+
+        sudo apt install python-rosdep
         sudo rosdep init
         rosdep update
-
-
 
 ## Contents
 
