@@ -1,14 +1,40 @@
+# AI bot with ROS
+
+
 ## Work Inspiration 
 
-This project involves the development of an AI line following robot.
+This project involves the development of an AI line following robot with ROS.
 
-The robot, which is constructed using a Raspberry Pi as the controller, uses deep learning to predict required movements in order to follow a line.
 
-The error signal for the neural network is generated using a set of sensors on the bottom of the robot. During the learning phase, the robot uses these sensors and a reflex based control system to follow the line. The neural network uses the images input using a camera mounted on the front to predict the required movements to reduce the error signal. It uses a closed-loop back propagation system to perform this.
+## Prerequisites
 
-This project involves investigation into potential improvements to the current system; for example constant error propagation, and convelutional input filtering. The current system is described in: https://arxiv.org/pdf/2001.02970.pdf
+Install ROS:
 
----
+1. Add GPG key of ROS to apt
+
+        sudo wget -O - https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo apt-key add -
+
+2. Add apt repository for ROS
+
+        # On Ubuntu 18.04 bionic
+        sudo apt-add-repository "deb http://packages.ros.org/ros/ubuntu bionic main"
+
+3. Update repositories
+
+        sudo apt-get update
+
+4. Install the Ros Desktop
+
+        # On Ubuntu 18.04 bionic
+	sudo apt install ros-melodic-desktop
+
+5. Initialize ROS
+
+         sudo rosdep init
+         rosdep update
+
+
+
 ## Repository Description
 
 This repository provides a ROS (Robot Operating System) based framework for development and testing of neural network implementations with a line following robot. The line following robot can be realised as either a simulation or as a physical robot.
@@ -33,10 +59,6 @@ This repository provides a ROS (Robot Operating System) based framework for deve
 ## How to use
 
 Instructions for using each section of the framework can be found in the respective folder.
-
-In general however, ROS is a common requirement for all modules. The ROS distribution used for this project was Melodic ROS.
-
-Instructions for getting started with ROS can be found on the [ROS Wiki](http://wiki.ros.org/ROS/Tutorials).
 
 __This repository is also dependent on submodules so when cloning use:__
 ```
