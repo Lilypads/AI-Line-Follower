@@ -1,10 +1,6 @@
 # AI bot with ROS
 
-
-## Work Inspiration 
-
-This project involves the development of an AI line following robot with ROS.
-
+This repository provides a ROS (Robot Operating System) based framework for development and testing of neural network implementations with a line following robot. The line following robot can be realised as either a simulation or as a physical robot.
 
 ## Prerequisites
 
@@ -16,7 +12,6 @@ Install ROS:
 
 2. Add apt repository for ROS
 
-        # On Ubuntu 18.04 bionic
         sudo apt-add-repository "deb http://packages.ros.org/ros/ubuntu bionic main"
 
 3. Update repositories
@@ -25,21 +20,14 @@ Install ROS:
 
 4. Install the Ros Desktop
 
-        # On Ubuntu 18.04 bionic
 	sudo apt install ros-melodic-desktop
 
 5. Initialize ROS
 
-         sudo rosdep init
-         rosdep update
+        sudo rosdep init
+        rosdep update
 
 
-
-## Repository Description
-
-This repository provides a ROS (Robot Operating System) based framework for development and testing of neural network implementations with a line following robot. The line following robot can be realised as either a simulation or as a physical robot.
-
----
 
 ## Contents
 
@@ -54,6 +42,7 @@ This repository provides a ROS (Robot Operating System) based framework for deve
 * __neural_networks:__ this directory contains the neural network implementations used in the project
 
 * __interface_specifications:__ this directory contains specifications for module interfaces for the framework
+
 
 
 ## How to use
