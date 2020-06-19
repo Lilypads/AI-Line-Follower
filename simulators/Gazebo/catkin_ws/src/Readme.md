@@ -17,20 +17,28 @@ This package contains the urdf description of the robot which defines the robot 
 This package is used to launch the simulation. It defines the line-track simulation environment (which uses an [image](https://github.com/a2198699s/AI-Line-Follower/blob/master/simulators/Gazebo/catkin_ws/src/MOVE_ME/materials/textures/MyImage.png) which needs to be moved to the standard environment folder as described in this [folder](https://github.com/a2198699s/AI-Line-Follower/tree/master/simulators/Gazebo/catkin_ws/src/MOVE_ME). It contains a configuration file for Rviz to allow for the robot to be visualised.
 
 
-## Every time you want to launch the environment (after you've followed it through once). Replace ~ with the base of your directory in each command.
+## How to use
 
-source /opt/ros/melodic/setup.bash
+First you need to copy files inside __MOVE_ME__ directory to ~/.gazebo/models/my_ground_plane/
 
-cd ~/catkin_ws/src
-
-catkin_init_workspace
-
-cd ..
-
+Next cd to the workspace:
+```
+cd Gazebo/catkin_ws
+```
+Build the workspace:
+```
 catkin_make
+```
+Always source the workspace before running it to avoid ROS being unable to find package
+```
+source devel/setup.bash
+```
 
-source ~/catkin_ws/devel/setup.bash
-
-## Launching the simulation
-
+Launching the simulation:
+```
 roslaunch mybot_gazebo mybot_world.launch
+```
+
+To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
+
+To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
