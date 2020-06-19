@@ -4,7 +4,11 @@ This repository provides a ROS (Robot Operating System) based framework for deve
 
 ## Prerequisites
 
-Install ROS:
+Install ROS Melodic:
+
+*Note that each platform might have a slightly different installation method.
+See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
+The following method is specific for Ubuntu18.04(Bionic) platform.
 
 1. Add GPG key of ROS to apt
 
@@ -52,6 +56,8 @@ Install ROS:
 ## How to use
 
 Instructions for using each section of the framework can be found in the respective folder.
+
+To start creating a simulation on enkiSimulator and Gazebo ROS platform, see  __simulators__ directory
 
 __This repository is also dependent on submodules so when cloning use:__
 ```
