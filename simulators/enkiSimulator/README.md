@@ -59,7 +59,7 @@ roscore
 
 6. Make sure you are in the enki example workspace on your new terminal:
 ```
-cd ~/AI-Line_Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
+cd ~/AI-Line-Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
 ```
 7. Source the workspace:
 ```
