@@ -11,12 +11,12 @@ a fast 2D robot simulator using the QT5 build system.
 
 [GPL 2.0](LICENSE).
 
-# Description
+## Description
 This project provides an additional ROS based package in the examples directory. This gives an example for using the enki simulator with the ROS framework used in [AI-Line-Follower](https://github.com/a2198699s/AI-Line-Follower).
 
-# Use with ROS
+## How to run simulation
 
-## First the enki library needs to be built
+__First the enki library needs to be built__
 
 1. cd to the directory (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where the directory is):
 ```
@@ -33,9 +33,9 @@ make
 sudo apt-get install qt5-default
 ```
 
-## Next try to build and run an example __ros_example__
+__Next try to build an example "ros_example"__
 
-1. Empty the catkin_ws/devel and catkin_ws/build folders due to saved user specific cache stuff which will cause error when building ROS package on a different PC. You can do that by system files program or doing the following command:
+3. Empty the catkin_ws/devel and catkin_ws/build folders due to saved user specific cache stuff which will cause error when building ROS package on a different PC. You can do that by system files program or doing the following command:
 ```
 cd ~/AI-Line-Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
 rm -r devel
@@ -44,28 +44,28 @@ mkdir devel
 mkdir build
 ```
 
-2. Build the ROS package:
+4. Build the ROS package:
 ```
 catkin_make
 ```
 
-3. Run roscore on one terminal (if haven't already):
+__Now Run the simulation__
+
+5. Run roscore on one terminal (if haven't already):
 ```
 roscore
 ```
 *Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+x.
 
-__Now Run the simulation__
-
-4. Make sure you are in the enki example workspace on your new terminal:
+6. Make sure you are in the enki example workspace on your new terminal:
 ```
 cd ~/AI-Line_Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
 ```
-5. Source the workspace:
+7. Source the workspace:
 ```
 source devel/setup.bash
 ```
-6. Run it:
+8. Run it:
 ```
 rosrun enki_ros_pck robot
 ```
