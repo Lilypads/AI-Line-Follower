@@ -8,7 +8,8 @@ Install ROS Melodic:
 
  *Note that each platform might have a slightly different installation method.
  See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
- The following method is specific for Ubuntu18.04(Bionic) platform.
+
+*The following method is specific for Ubuntu18.04(Bionic) platform.
 
 1. Add GPG key of ROS to apt
 
@@ -22,7 +23,7 @@ Install ROS Melodic:
 
         sudo apt-get update
 
-4. Install the Ros Desktop
+4. Install the ROS Desktop
 
         sudo apt install ros-melodic-desktop
 
@@ -36,6 +37,33 @@ Install ROS Melodic:
         sudo apt install python-rosdep
         sudo rosdep init
         rosdep update
+
+## To duplicate this repository to your PC
+First, install git
+```
+sudo apt install git
+```
+To check that git was installed and its version
+```
+git --version
+```
+__This repository is dependent on submodules so when cloning use:__
+```
+git clone https://github.com/a2198699s/AI-Line-Follower --recurse-submodules
+```
+You will now get this repository in your ~/ or Home directory.
+To check that it is there:
+```
+cd ~
+ls
+```
+
+## How to start
+
+Instructions for using each section of the framework can be found in the respective directory.
+
+To start running simulation, see README in __simulators__ directory.
+
 
 ## Contents
 
@@ -51,15 +79,3 @@ Install ROS Melodic:
 
 * __interface_specifications:__ this directory contains specifications for module interfaces for the framework
 
-
-
-## How to use
-
-Instructions for using each section of the framework can be found in the respective folder.
-
-To start creating a simulation on enkiSimulator and Gazebo ROS platform, see  __simulators__ directory
-
-__This repository is also dependent on submodules so when cloning use:__
-```
-git clone https://github.com/a2198699s/AI-Line-Follower --recurse-submodules
-```
