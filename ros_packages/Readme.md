@@ -8,31 +8,44 @@ This folder contains misc. ROS packages used for the project.
 
 * __enki_line_react_control:__ this package is used to provide line following capability to the Enki simulation. It takes the line sensor values published by Enki as an input and publishes a motor control message
 
-## How to use
+## How to use the packages
 
-Copy the package you want to use to src folder in a catkin workspace (.../catkin_ws/src)
+1. Copy the packages to src directory of a catkin workspace. Assuming creating a new one in this case (~/catkin_ws):
+```
+cd ~
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+cp -r ~/AI-Line-Follower/ros_packages/* ~/catkin_ws/src
+```
+*Note that if you already have a workspace, just do the cp line and change the ~/catkin_ws/src to your workspace
 
-cd to the workspace(.../catkin_ws)
+**Assume you clone this repository to ~/ or Home directory as instructed on first README, else just change ~/AI-Line-Follower/ros_packages/ to where the directory is and add * at the end.
 
-Then build the package:
+2. cd to the workspace:
+```
+cd ~/catkin_ws
+```
+3. Build the package:
 ```
 catkin_make
 ```
-
-Always source the workspace before runnning to avoid ROS being unable to find the package
+4. Source the workspace:
 ```
 source devel/setup.bash
 ```
 
-To run, ensure roscore and the Enki/Gazebo simulation is running. (See __simulators__ directory)
+*Note: ensure roscore and the Enki/Gazebo simulation is running on seperate terminals. (See __simulators__ directory)
+
+5. Run the package:
 ```
 rosrun <package_name> <exe_name>
 ```
-for example
+5.1 for Enki
 ```
 rosrun enki_line_react_control line_react_control_node
 ```
-or
+5.2 for Gazebo
 ```
 rosrun line_react_control line_react_control_node
 ```
