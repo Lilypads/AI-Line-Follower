@@ -23,6 +23,8 @@ cd catkin_ws
 mkdir src
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/catkin_ws/src
 ```
+*Assume you clone this repository to ~/ or Home directory as instructed on first README
+
 2. cd to the workspace
 ```
 cd ~/catkin_ws
