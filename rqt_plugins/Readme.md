@@ -13,25 +13,35 @@ This directory contains ROS packages which provide custom GUI plugins for rqt (a
 * __rqt_neural_network_diagnostics:__ this package provides a real-time display of outputs from the neural network module
 
 
-## How to use
+## How to use plugins on rqt window
 
-Copy the package(s) you want to use to a catkin workspace (catkin_ws/src).
-From the catkin_ws run:
+1. Copy the plugin packages to src directory of a catkin workspace. Assuming creating a new one in this case (~/catkin_ws):
+```
+cd ~
+mkdir catkin_ws
+cd catkin_ws
+mkdir src
+cp -r ~/AI-Line-Follower/rqt_plugins/* ~/catkin_ws/src
+```
+2. cd to the workspace
+```
+cd ~/catkin_ws
+```
+3. Build the packages:
 ```
 catkin_make
 ```
-This should build the packages.
-It is good practice to source the workspace after this:
+4. Source the workspace:
 ```
 source devel/setup.bash
 ```
+*Note make sure roscore is running on one terminal
 
-To use the plugins, make sure roscore is running.
-Then start rqt:
+5. Start rqt:
 ```
 rqt --force-discover
 ```
-The plugins should be found in the Design Special Topic 5 folder in the plugins dropdown.
+The custom plugins should be found in the __Plugins__ > __Design Special Topic 5__.
 
 ## Instructions for making your own, custom, rqt plugin
 
