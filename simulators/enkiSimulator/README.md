@@ -16,58 +16,62 @@ This project provides an additional ROS based package in the examples directory.
 
 # Use with ROS
 
-First the enki library needs to be built:
+## First the enki library needs to be built
+
+1. cd to the directory (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where the directory is):
 ```
-cd enkiSimulator
-cd enki
+cd ~/AI-Line-Follower/simulators/enkiSimulator/enki
+```
+2. Build the library:
+```
 qmake
 make
 ```
 
-*Note that if you cannot run make, you probably need to install qt5 first:
+*Note that if you cannot run qmake and make, you probably need to install qt5 first:
 ```
 sudo apt-get install qt5-default
 ```
 
-Next try to build and run an example __ros_example__:
+## Next try to build and run an example __ros_example__
 
-Empty the catkin_ws/devel and catkin_ws/build folders due to saved user specific cache stuff which will cause error when building ROS package on a different PC
+1. Empty the catkin_ws/devel and catkin_ws/build folders due to saved user specific cache stuff which will cause error when building ROS package on a different PC. You can do that by system files program or doing the following command:
 ```
-cd ..
-cd examples/ros_example/catkin_ws
-cd devel
-rm *
-cd ..
-cd build
-rm *
+cd ~/AI-Line-Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
+rm -r devel
+rm -r build
+mkdir devel
+mkdir build
 ```
 
-Build the ROS package:
+2. Build the ROS package:
 ```
-cd ..
 catkin_make
 ```
 
-Run roscore on one terminal (if haven't already):
+3. Run roscore on one terminal (if haven't already):
 ```
 roscore
 ```
 *Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+x.
 
-To run the simulation:
+__Now Run the simulation__
 
-Make sure you are in the enki example workspace (.../enkiSimulator/examples/ros_example/catkin_ws)
-
-source the workspace
+4. Make sure you are in the enki example workspace on your new terminal:
+```
+cd ~/AI-Line_Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
+```
+5. Source the workspace:
 ```
 source devel/setup.bash
 ```
-and run it on another terminal
+6. Run it:
 ```
 rosrun enki_ros_pck robot
 ```
-The robot window should show up, but not yet moving.
 
-To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
+__The robot window should show up, but not yet moving.__
 
-To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
+* To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
+
+* To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
