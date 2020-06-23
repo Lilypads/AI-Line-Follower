@@ -21,7 +21,7 @@ You can do that by system files program or doing the following command:
 
 *Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/rqt_plugins/* to where you clone the directory to on your PC.
 
-__If create a new workspace (~/catkin_ws)__
+* In case creating a new workspace (~/catkin_ws)
 ```
 cd ~
 mkdir catkin_ws
@@ -29,7 +29,7 @@ cd catkin_ws
 mkdir src
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/catkin_ws/src
 ```
-__If already have a workspace__
+* If already have a workspace
 ```
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/path_to_src_of_workspace
 ```
