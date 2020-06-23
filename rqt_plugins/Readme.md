@@ -19,7 +19,7 @@ This directory contains ROS packages which provide custom GUI plugins for rqt (a
 
 You can do that by system files program or doing the following command:
 
-*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/rqt_plugins/* to where you clone the directory to on your PC.
+*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/rqt_plugins/ to where you clone the directory to on your PC.
 
 * In case creating a new workspace (~/catkin_ws)
 ```
