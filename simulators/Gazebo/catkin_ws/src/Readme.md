@@ -17,30 +17,42 @@ This package contains the urdf description of the robot which defines the robot 
 This package is used to launch the simulation. It defines the line-track simulation environment (which uses an [image](https://github.com/a2198699s/AI-Line-Follower/blob/master/simulators/Gazebo/catkin_ws/src/MOVE_ME/materials/textures/MyImage.png) which needs to be moved to the standard environment folder as described in this [folder](https://github.com/a2198699s/AI-Line-Follower/tree/master/simulators/Gazebo/catkin_ws/src/MOVE_ME). It contains a configuration file for Rviz to allow for the robot to be visualised.
 
 
-## How to use
+## How to run simulation
 
-First you need to copy files inside __MOVE_ME__ directory to ~/.gazebo/models/my_ground_plane/
+1. Copy files inside __MOVE_ME__ directory to ~/.gazebo/models/my_ground_plane/
 
+You can do that by system files program or doing the following command:
+```
+cd ~
+mkdir .gazebo
+cd .gazebo
+mkdir models
+cd models
+mkdir my_ground_plane
+cp -r ~/AI-Line-Follower/simulators/Gazebo/catkin_ws/src/MOVE_ME/* ~/.gazebo/models/my_ground_plane/
+```
 *Note that the ~/.gazebo/ is a hidden directory. You might need to go to setting and check "Show Hidden Files" box.
 
-Next cd to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where Gazebo catkin workspace is):
+2. cd to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where Gazebo catkin workspace is):
 ```
 cd ~/AI-Line-Follower/simulators/Gazebo/catkin_ws
 ```
-Build the workspace:
+3. Build the workspace:
 ```
 catkin_make
 ```
-Always source the workspace before running it to avoid ROS being unable to find package:
+4. Always source the workspace before running it to avoid ROS being unable to find package:
 ```
 source devel/setup.bash
 ```
 
-Launching the simulation:
+5. Launching the simulation:
 ```
 roslaunch mybot_gazebo mybot_world.launch
 ```
+*Note that you can run roscore on another terminal like instructed in enkiSimulator README first. But, roslaunch will run one for you if there isn't one running already anyways.
 
-To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
+__Gazebo window should show up with robot and the environment.__
+* To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
 
-To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
+* To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
