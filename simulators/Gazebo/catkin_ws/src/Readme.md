@@ -21,9 +21,9 @@ This package is used to launch the simulation. It defines the line-track simulat
 
 First you need to copy files inside __MOVE_ME__ directory to ~/.gazebo/models/my_ground_plane/
 
-*Note that the ~/.gazebo/ is hidden. You might need to go to setting and check "Show Hidden Files" box.
+*Note that the ~/.gazebo/ is a hidden directory. You might need to go to setting and check "Show Hidden Files" box.
 
-Next cd to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README):
+Next cd to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where Gazebo catkin workspace is):
 ```
 cd ~/AI-Line-Follower/simulators/Gazebo/catkin_ws
 ```
@@ -31,7 +31,7 @@ Build the workspace:
 ```
 catkin_make
 ```
-Always source the workspace before running it to avoid ROS being unable to find package
+Always source the workspace before running it to avoid ROS being unable to find package:
 ```
 source devel/setup.bash
 ```
