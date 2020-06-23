@@ -15,9 +15,11 @@ This directory contains ROS packages which provide custom GUI plugins for rqt (a
 
 ## How to use plugins on rqt window
 
-1. Copy the plugin packages to src directory of a catkin workspace. You can do that by system files program or doing the following command:
+1. Copy the plugin packages to src directory of a catkin workspace
 
-*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README
+You can do that by system files program or doing the following command:
+
+*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/rqt_plugins/* to where you clone the directory to on your PC.
 
 __If create a new workspace (~/catkin_ws):__
 ```
@@ -32,9 +34,13 @@ __If already have a workspace__
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/path_to_src_of_workspace
 ```
 
-2. cd to the workspace
+2. cd to the workspace:
 ```
 cd ~/catkin_ws
+```
+or
+```
+cd ~/path_to_workspace
 ```
 3. Build the packages:
 ```
