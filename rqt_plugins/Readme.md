@@ -15,7 +15,11 @@ This directory contains ROS packages which provide custom GUI plugins for rqt (a
 
 ## How to use plugins on rqt window
 
-1. Copy the plugin packages to src directory of a catkin workspace. Assuming creating a new one in this case (~/catkin_ws):
+1. Copy the plugin packages to src directory of a catkin workspace. You can do that by system files program or doing the following command:
+
+*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README
+
+__If create a new workspace (~/catkin_ws):__
 ```
 cd ~
 mkdir catkin_ws
@@ -23,7 +27,10 @@ cd catkin_ws
 mkdir src
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/catkin_ws/src
 ```
-*Assume you clone this repository to ~/ or Home directory as instructed on first README
+__If already have a workspace__
+```
+cp -r ~/AI-Line-Follower/rqt_plugins/* ~/path_to_src_of_workspace
+```
 
 2. cd to the workspace
 ```
@@ -37,7 +44,7 @@ catkin_make
 ```
 source devel/setup.bash
 ```
-*Note make sure roscore is running on one terminal
+*Note: make sure roscore is running on one terminal
 
 5. Start rqt:
 ```
