@@ -34,7 +34,7 @@ cp -r ~/AI-Line-Follower/rqt_plugins/* ~/catkin_ws/src
 cp -r ~/AI-Line-Follower/rqt_plugins/* ~/path_to_src_of_workspace
 ```
 
-2. cd to the workspace:
+2. Change directory to the workspace:
 ```
 cd ~/catkin_ws
 ```
@@ -50,7 +50,7 @@ catkin_make
 ```
 source devel/setup.bash
 ```
-*Note: make sure roscore is running on one terminal
+*Note: make sure roscore is running on one terminal before starting rqt
 
 5. Start rqt:
 ```
