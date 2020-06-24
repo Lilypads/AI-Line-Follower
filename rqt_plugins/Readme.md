@@ -50,7 +50,10 @@ catkin_make
 ```
 source devel/setup.bash
 ```
-*Note: make sure roscore is running on one terminal before starting rqt
+
+*Note: You should always source a workspace everytime before running it to avoid ROS being unable to find the package. However, building it again is unnecessary.
+
+*Note2: make sure roscore is running on one terminal before starting rqt
 
 5. Start rqt:
 ```
