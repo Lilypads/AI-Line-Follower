@@ -14,6 +14,8 @@ This folder contains misc. ROS packages used for the project.
 
 *Note: Do not copy both packages to the same workspace as it will cause error when building the package.
 
+*Note 2: The package does not have to be in the same workspace as your simulation.
+
 __You can do that by system files program or doing the following command:__
 
 1.1 In case creating a new workspace (~/catkin_ws)
