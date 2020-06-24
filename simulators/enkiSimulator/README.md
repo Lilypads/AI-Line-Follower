@@ -65,6 +65,8 @@ cd ~/AI-Line-Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
 ```
 source devel/setup.bash
 ```
+*Note that you should always source a workspace everytime before running it to avoid ROS unable to find the package.
+
 8. Run it:
 ```
 rosrun enki_ros_pck robot
