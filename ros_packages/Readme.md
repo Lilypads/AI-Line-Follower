@@ -65,6 +65,8 @@ source devel/setup.bash
 
 *Note: ensure roscore and the Enki/Gazebo simulation is running on seperate terminals. (See __simulators__ directory)
 
+*Note2: You should always source a workspace everytime before running it to avoid ROS being unable to find the package. However, building it again is unnecessary.
+
 5. Run the package:
 ```
 rosrun <package_name> <exe_name>
