@@ -45,7 +45,7 @@ catkin_make
 ```
 source devel/setup.bash
 ```
-*Note that you should always source a workspace before using it to avoid ROS unable to find the package
+*Note that you should always source a workspace everytime before running it to avoid ROS unable to find the package.
 
 5. Launching the simulation:
 ```
