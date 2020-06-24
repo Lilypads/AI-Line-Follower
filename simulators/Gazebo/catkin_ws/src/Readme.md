@@ -33,7 +33,7 @@ cp -r ~/AI-Line-Follower/simulators/Gazebo/catkin_ws/src/MOVE_ME/* ~/.gazebo/mod
 ```
 *Note that the ~/.gazebo/ is a hidden directory. You might need to go to setting and check "Show Hidden Files" box.
 
-2. cd to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where Gazebo catkin workspace is):
+2. Change directory to the workspace (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just change ~/AI-Line-Follower/simulators/Gazebo/catkin_ws to where Gazebo catkin workspace is):
 ```
 cd ~/AI-Line-Follower/simulators/Gazebo/catkin_ws
 ```
@@ -41,10 +41,11 @@ cd ~/AI-Line-Follower/simulators/Gazebo/catkin_ws
 ```
 catkin_make
 ```
-4. Always source the workspace before running it to avoid ROS being unable to find package:
+4. Source the workspace:
 ```
 source devel/setup.bash
 ```
+*Note that you should always source a workspace before using it to avoid ROS unable to find the package
 
 5. Launching the simulation:
 ```
