@@ -10,21 +10,40 @@ This folder contains misc. ROS packages used for the project.
 
 ## How to use the packages
 
-1. Copy the packages to src directory of a catkin workspace. Assuming creating a new one in this case (~/catkin_ws):
+1. Copy the package to src directory of a catkin workspace
+
+*Note: Do not copy both packages to the same workspace as it will cause error when building the package.
+
+You can do that by system files program or doing the following command:
+
+*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
+
+* In case creating a new workspace (~/catkin_ws)
 ```
 cd ~
 mkdir catkin_ws
 cd catkin_ws
 mkdir src
-cp -r ~/AI-Line-Follower/ros_packages/* ~/catkin_ws/src
 ```
-*Note that if you already have a workspace, just do the cp line and change the ~/catkin_ws/src to your workspace
-
-**Assume you clone this repository to ~/ or Home directory as instructed on first README, else just change ~/AI-Line-Follower/ros_packages/ to where the directory is and add * at the end.
-
+1.1 for Gazebo
+```
+cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/catkin_ws/src
+```
+1.2 for Enki
+```
+cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/catkin_ws/src
+```
+* If already have a workspace
+```
+cp -r ~/AI-Line-Follower/ros_packages/package_name ~/path_to_src_of_workspace
+```
 2. cd to the workspace:
 ```
 cd ~/catkin_ws
+```
+or
+```
+cd ~/path_to_workspace
 ```
 3. Build the package:
 ```
