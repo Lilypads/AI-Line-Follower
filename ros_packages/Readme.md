@@ -16,8 +16,6 @@ This folder contains misc. ROS packages used for the project.
 
 __You can do that by system files program or doing the following command:__
 
-*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
-
 1.1 In case creating a new workspace (~/catkin_ws)
 ```
 cd ~
@@ -34,9 +32,18 @@ cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/catkin_ws/src
 cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/catkin_ws/src
 ```
 1.2 If already have a workspace
+
+1.2.1 for Enki
 ```
-cp -r ~/AI-Line-Follower/ros_packages/package_name ~/path_to_src_of_workspace
+cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/path_to_src_of_workspace
 ```
+1.2.2 for Gazebo
+```
+cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/path_to_src_of_workspace
+```
+
+*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
+
 2. cd to the workspace:
 ```
 cd ~/catkin_ws
