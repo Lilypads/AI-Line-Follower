@@ -18,7 +18,7 @@ This project provides an additional ROS based package in the examples directory.
 
 __First the enki library needs to be built__
 
-1. cd to the directory (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where the directory is):
+1. Change directory to the library directory (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where the directory is):
 ```
 cd ~/AI-Line-Follower/simulators/enkiSimulator/enki
 ```
@@ -57,7 +57,7 @@ roscore
 ```
 *Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+x.
 
-6. Make sure you are in the enki example workspace on your new terminal:
+6. Make sure you are in the enki example workspace on your new terminal or do the following command:
 ```
 cd ~/AI-Line-Follower/simulators/enkiSimulator/examples/ros_example/catkin_ws
 ```
