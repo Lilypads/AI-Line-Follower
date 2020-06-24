@@ -14,7 +14,7 @@ This folder contains misc. ROS packages used for the project.
 
 *Note: Do not copy both packages to the same workspace as it will cause error when building the package.
 
-*Note 2: The package does not have to be in the same workspace as your simulation.
+*Note2: The package does not have to be in the same workspace as your simulation.
 
 __You can do that by system files program or doing the following command:__
 
@@ -46,7 +46,7 @@ cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/path_to_src_of_worksp
 
 *Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
 
-2. cd to the workspace:
+2. Change directory to the workspace:
 ```
 cd ~/catkin_ws
 ```
