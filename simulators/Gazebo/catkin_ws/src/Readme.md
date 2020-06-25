@@ -63,3 +63,16 @@ __Gazebo window should show up with robot and the environment.__
 * To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
 
 * To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
+
+### How to check which node is currently running
+
+On another terminal:
+```
+rosnode list
+```
+### How to view communication between nodes using rqt_graph
+
+On another terminal:
+```
+rosrun rqt_graph rqt_graph
+```
