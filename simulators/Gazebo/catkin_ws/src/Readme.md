@@ -16,6 +16,12 @@ This package contains the urdf description of the robot which defines the robot 
 ### mybot_gazebo
 This package is used to launch the simulation. It defines the line-track simulation environment (which uses an [image](https://github.com/a2198699s/AI-Line-Follower/blob/master/simulators/Gazebo/catkin_ws/src/MOVE_ME/materials/textures/MyImage.png) which needs to be moved to the standard environment folder as described in this [folder](https://github.com/a2198699s/AI-Line-Follower/tree/master/simulators/Gazebo/catkin_ws/src/MOVE_ME). It contains a configuration file for Rviz to allow for the robot to be visualised.
 
+## Prerequisite
+
+Install the following ros package.
+```
+sudo apt-get install ros-melodic-ros-control ros-melodic-ros-controllers
+```
 
 ## How to run simulation
 
