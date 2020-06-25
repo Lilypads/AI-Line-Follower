@@ -55,7 +55,7 @@ __Now Run the simulation__
 ```
 roscore
 ```
-*Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+x.
+*Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+c.
 
 6. Make sure you are in the enki example workspace on your new terminal or do the following command:
 ```
