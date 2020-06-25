@@ -25,7 +25,7 @@ Install ROS Melodic:
 
 4. Install the ROS Desktop
 
-        sudo apt install ros-melodic-desktop
+        sudo apt install ros-melodic-desktop-full
 
 5. Set your environment variables
 
