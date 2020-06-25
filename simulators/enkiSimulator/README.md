@@ -77,3 +77,10 @@ __The robot window should show up, but not yet moving.__
 * To make the robot move following the line, go to __ros_packages__ directory and follow the README instructions there.
 
 * To open the custom rqt plugins in rqt gui windows, go to __rqt_plugins__ directory and follow the README instructions there.
+
+## How to view communication between nodes using rqt_graph
+
+On another terminal:
+```
+rosrun rqt_graph rqt_graph
+```
