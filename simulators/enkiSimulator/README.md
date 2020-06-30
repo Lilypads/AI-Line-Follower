@@ -16,6 +16,11 @@ This project provides an additional ROS based package in the examples directory.
 
 ## How to run simulation
 
+Install qt5:
+```
+sudo apt-get install qt5-default
+```
+
 __First the enki library needs to be built__
 
 1. Change directory to the library directory (assuming you clone this repository to ~/ or Home directory as instructed on first README, else just cd to where the directory is):
@@ -26,11 +31,6 @@ cd ~/AI-Line-Follower/simulators/enkiSimulator/enki
 ```
 qmake
 make
-```
-
-*Note that if you cannot run qmake and make, you probably need to install qt5 first:
-```
-sudo apt-get install qt5-default
 ```
 
 __Next try to build an example "ros_example"__
