@@ -1,6 +1,4 @@
-# ROS Packages
-
-This folder contains misc. ROS packages used for the project.
+# ROS line following Packages
 
 ## Contents
 
