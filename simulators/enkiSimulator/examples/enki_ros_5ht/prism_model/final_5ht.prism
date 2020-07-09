@@ -1,0 +1,106 @@
+dtmc
+
+const int wait_location = 0; //agent is at waiting location
+const int l = 1000; //distance between waiting location and central reward spawn point.
+const int delay; //number of steps after agent arrives at waiting location before reward is spawned
+const int MAX = 2000; // upper bound on agent position
+const int reward_unseen_speed; //speed of agent when vis2 = 0 
+const int reward_seen_speed; //speed of agent when vis2 = 1
+const int speed_uncertainty; 
+const int reward_spread = 330;
+ 
+
+
+//global reward_present : bool init false; 
+global waiting : bool init false; //agent is slowing in front of the reward location 
+
+ 
+module limbic_system
+
+
+
+vis1 : [0..1] init 0;//visual input to speed gained when agent can see reward_location
+vis2: [0..1] init 0;//  visual input to speed gained when agent can see reward
+pos : [0..MAX] init 0;//position of agent
+s : [0..10] init 0;  //state counter to help ordering of events 
+speedtype : [0..2] init 0;
+reward_pos: [0..MAX];
+
+//s=0 -> initial state, determine reward_spread
+//s=1 -> determine speedtype
+//s=2 -> exploration
+//s=3 -> has seen visual landmark, slowed down, waiting for reward
+//s=4 -> has seen reward, moving towards location of reward
+//s=5 -> reached reward location, hit or miss
+//s=6 -> at end
+
+
+at_reward : bool init false;
+collected_reward : bool init false;
+missed_reward : bool init false;
+
+[] s=0 -> 1/7 : (reward_pos'= l + reward_spread) & (s'=1) + 1/7 : (reward_pos'= l - reward_spread) & (s'=1) + 1/7 : (reward_pos'= l) & (s'=1) + 1/7 : (reward_pos'= l + 2*reward_spread) & (s'=1) + 1/7 : (reward_pos'= l - 2*reward_spread) & (s'=1) + 1/7 : (reward_pos'= l + 3*reward_spread) & (s'=1) + 1/7 : (reward_pos'= l - 3*reward_spread) & (s'=1); 
+[] s=1 -> 1/3 : (speedtype' = 0) & (s'=2) + 1/3 : (speedtype' = 1) & (s'=2)  + 1/3 : (speedtype' = 2) & (s'=2);
+[] s=2 -> (vis1'=1) & (waiting'=true) & (pos' = wait_location) & (s'=3); // see area containing reward and end exploration
+//slow down in front of reward_location, expected to contain reward// "timed" syncronises agent movement with the counters controlling the spawning and despawning of the reward
+
+// "timed" syncronises agent movement with the counters controlling the spawning and despawning of the reward
+// before reward  present
+[timed] s=3 & speedtype=0 & pos<reward_pos & reward_present=false-> 1: (pos' = min(pos+speed, reward_pos));
+[timed] s=3 & speedtype=1 & pos<reward_pos & reward_present=false-> 1: (pos' = min(pos+speedmax, reward_pos));
+[timed] s=3 & speedtype=2 & pos<reward_pos & reward_present=false -> 1: (pos' = min(pos+speedmin, reward_pos));
+[timed] s=3 & reward_present=true & pos<reward_pos  -> 1 : (vis2'=1) & (s'=4); //agent sees reward and updates vis2
+[timed] s=3 & pos>=reward_pos  -> 1: (s'=5); //agent reaches reward location; update state counter
+
+
+//after reward present
+[timed] s=4 & speedtype=0 & pos<reward_pos -> (pos' = min(pos+speed, reward_pos));
+[timed] s=4 & speedtype=1 & pos<reward_pos -> (pos' = min(pos+speedmax, reward_pos));
+[timed] s=4 & speedtype=2 & pos<reward_pos -> (pos' = min(pos+speedmin, reward_pos));
+[timed] s=4 & pos>=reward_pos -> 1: (s'=5); //agent reaches reward location; update state counter
+
+
+[timed] s=5 & reward_present=true -> (collected_reward' = true) & (at_reward' = true) & (s'=6); //agent collects reward
+[timed] s=5  & reward_present=false -> (missed_reward'=true) & (at_reward'= true) & (s'=6); //agent misses reward
+
+[timed] s=6 -> 1: (s'=6);  // end state has been reached
+
+
+
+
+endmodule 
+
+
+
+module reward_spawner
+
+
+c : [0..delay] init 0; //reward spawn delay counter
+t : [0..10] init 0;  //state counter to help ordering of events
+
+spwnd : bool init false;
+despwnd : bool init false;
+reward_present : bool init false;
+
+[] (t=0) & waiting=false -> 1: (t' = 0);
+[] (t=0) & waiting=true -> 1: (t' = 1);
+
+[timed] (t=1) & spwnd=false & c<delay-> 1: (c'=c+1);  //increment reward spawn counter
+[timed] (t=1) & spwnd=false & c>=delay -> (spwnd'=true) & (c'=0) & (reward_present'=true) & (t'=2); //spawn reward after "delay" steps
+[timed](t=2) -> (t'=2);
+
+endmodule
+
+
+
+
+
+formula x = vis1 + vis2; //speed based on visual inputs
+
+formula speed = ((x=1)?reward_unseen_speed:(x=2)?reward_seen_speed:0);
+
+formula speedmax = ((x=1)?reward_unseen_speed + speed_uncertainty:(x=2)?(reward_seen_speed):0);
+
+formula speedmin = ((x=1)?reward_unseen_speed - speed_uncertainty:(x=2)?(reward_seen_speed):0);
+
+
