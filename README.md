@@ -1,15 +1,15 @@
-# AI bot with ROS
+# Line following robot with ROS/ENKI
 
-This repository provides a ROS (Robot Operating System) based framework for development and testing of neural network implementations with a line following robot. The line following robot can be realised as either a simulation or as a physical robot.
+This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
 
 ## Prerequisites
 
 Install ROS Melodic:
 
- *Note that each platform might have a slightly different installation method.
+ * Note that each platform might have a slightly different installation method.
  See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
 
-*The following method is specific for Ubuntu18.04(Bionic) platform.
+The following method is specific for Ubuntu18.04(Bionic) platform.
 
 1. Add GPG key of ROS to apt
 
@@ -62,7 +62,7 @@ ls
 
 Instructions for using each section of the framework can be found in the respective directory.
 
-To start running simulation, see README in __simulators__ directory.
+To start running Enki simulation, see README in __simulators__ directory.
 
 
 ## Contents
