@@ -10,9 +10,9 @@
 
 1. Copy the package folder to src folder of a catkin workspace:
 
-*Do not copy both packages to the same workspace as it will cause error when building the package.*
+* Do not copy both packages to the same workspace as it will cause error when building the package.
 
-*The package does not have to be in the same workspace as your simulation.*
+* The package does not have to be in the same workspace as your simulation.
 
 __You can do that by system files program or doing the following command:__
 
