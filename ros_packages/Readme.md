@@ -10,39 +10,39 @@
 
 1. Copy the package folder to src folder of a catkin workspace:
 
-* Do not copy both packages to the same workspace as it will cause error when building the package.
+*Note: Do not copy both packages to the same workspace as it will cause error when building the package.
 
-* The package does not have to be in the same workspace as your simulation.
+*Note2: The package does not have to be in the same workspace as your simulation.
 
-__You can do that by system files program or doing the following command:__
+*Note3: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
 
-1.1 In case creating a new workspace (~/catkin_ws)
+You can do that by system files program or doing the following command:
+
+* In case creating a new workspace (~/catkin_ws)
 ```
 cd ~
 mkdir catkin_ws
 cd catkin_ws
 mkdir src
 ```
-for Enki
+ for Enki
 ```
 cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/catkin_ws/src
 ```
-for Gazebo
+ for Gazebo
 ```
 cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/catkin_ws/src
 ```
-1.2 If already have a workspace
+* If already have a workspace
 
-for Enki
+ for Enki
 ```
 cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/path_to_src_of_workspace
 ```
-for Gazebo
+ for Gazebo
 ```
 cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/path_to_src_of_workspace
 ```
-
-*Note: Assume you clone this repository to ~/ or Home directory as instructed on first README. Otherwise, change ~/AI-Line-Follower/ros_packages/ to where you clone the directory to on your PC.
 
 2. Change directory to the workspace:
 ```
