@@ -8,7 +8,7 @@
 
 ## How to use the packages
 
-1. Copy the package folder to src folder of a catkin workspace:
+1. Copy the package to src directory of a catkin workspace:
 
 *Note: Do not copy both packages to the same workspace as it will cause error when building the package.
 
