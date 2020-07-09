@@ -8,11 +8,11 @@
 
 ## How to use the packages
 
-1. Copy the package to src directory of a catkin workspace
+1. Copy the package folder to src folder of a catkin workspace:
 
-*Note: Do not copy both packages to the same workspace as it will cause error when building the package.
+*Do not copy both packages to the same workspace as it will cause error when building the package.*
 
-*Note2: The package does not have to be in the same workspace as your simulation.
+*The package does not have to be in the same workspace as your simulation.*
 
 __You can do that by system files program or doing the following command:__
 
@@ -23,21 +23,21 @@ mkdir catkin_ws
 cd catkin_ws
 mkdir src
 ```
-1.1.1 for Enki
+for Enki
 ```
 cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/catkin_ws/src
 ```
-1.1.2 for Gazebo
+for Gazebo
 ```
 cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/catkin_ws/src
 ```
 1.2 If already have a workspace
 
-1.2.1 for Enki
+for Enki
 ```
 cp -r ~/AI-Line-Follower/ros_packages/enki_line_react_control ~/path_to_src_of_workspace
 ```
-1.2.2 for Gazebo
+for Gazebo
 ```
 cp -r ~/AI-Line-Follower/ros_packages/line_react_control ~/path_to_src_of_workspace
 ```
@@ -69,11 +69,11 @@ source devel/setup.bash
 ```
 rosrun <package_name> <exe_name>
 ```
-5.1 for Enki
+for Enki
 ```
 rosrun enki_line_react_control line_react_control_node
 ```
-5.2 for Gazebo
+for Gazebo
 ```
 rosrun line_react_control line_react_control_node
 ```
