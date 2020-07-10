@@ -72,7 +72,7 @@ qmake
 make
 ```
 
-### Build "ros_example"
+## Build the repository workspace
 
 Change directory to the workspace directory:
 ```
