@@ -1,8 +1,0 @@
-prefix=/home/mcbottcher/enkiSimulator/examples/ros_example/catkin_ws/devel
-
-Name: enki_ros_pck
-Description: Description of enki_ros_pck
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

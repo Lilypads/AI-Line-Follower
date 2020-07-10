@@ -1,4 +1,0 @@
-To run all experiments (python3):
-
-./run_models.py
-./plot_results.py

@@ -1,2 +1,0 @@
-line_follower
--DCATKIN_DEVEL_PREFIX=/home/mcbottcher/enkiSimulator/examples/ros_example/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mcbottcher/enkiSimulator/examples/ros_example/catkin_ws/install -G Unix Makefiles
