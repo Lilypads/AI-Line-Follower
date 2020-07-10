@@ -17,9 +17,7 @@ a fast 2D robot simulator using the QT5 build system.
 
 ## Content
 * __enki:__ enki library provided by the original project
-* __examples:__ projects built on enki library
-
-  * __ros_example:__ line following robot simulator using Enki library.
+* __catkin_ws:__ line following robot simulator using Enki library.
 
 ## Prerequisites
 
@@ -78,7 +76,7 @@ make
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+cd .../AI-Line-Follower/catkin_ws
 ```
 Build the ROS package:
 ```
@@ -89,7 +87,7 @@ catkin_make
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+cd .../AI-Line-Follower/catkin_ws
 ```
 
 Run roscore on one terminal:
