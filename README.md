@@ -17,13 +17,11 @@ a fast 2D robot simulator using the QT5 build system.
 
 ## Content
 * __enki:__ enki library provided by the original project
-* __examples:__ projects built on enki library
-
-  * __ros_example:__ line following robot simulator using Enki library.
+* __catkin_ws:__ line following robot simulator using Enki library.
 
 ## Prerequisites
 
-### Install ROS Melodic:
+### Install ROS Melodic
 
  * Note that each platform might have a slightly different installation method.
  See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
@@ -57,7 +55,7 @@ The following method is specific for Ubuntu18.04(Bionic) platform.
         sudo rosdep init
         rosdep update
         
-### Install qt5:
+### Install qt5
 ```
 sudo apt-get install qt5-default
 ```
@@ -78,18 +76,18 @@ make
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+cd .../AI-Line-Follower/catkin_ws
 ```
 Build the ROS package:
 ```
 catkin_make
 ```
 
-### Run the simulation
+## Run the simulation
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+cd .../AI-Line-Follower/catkin_ws
 ```
 
 Run roscore on one terminal:
@@ -116,6 +114,9 @@ Run rqt on the forth terminal:
 source devel/setup.bash
 rqt --force-discover
 ```
+
+Select plugins:
+__Plugins > Design Special Topic 5__
 
 ### To check which node is currently running
 
