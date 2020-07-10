@@ -18,6 +18,13 @@ a fast 2D robot simulator using the QT5 build system.
 ## Content
 * __enki:__ enki library provided by the original project
 * __catkin_ws:__ line following robot simulator using Enki library.
+  * __src:__ directory containing different nodes
+     * __enki_line_react_control:__ subscribe to camera view, publish robot velocity
+     * __line_follower:__ enki environment and robot simulation
+     * __rqt_line_sensor_control:__ custom rqt from __Design Special Topic 5__
+     * __rqt_line_sensor_view:__ custom rqt from __Design Special Topic 5__
+     * __rqt_neural_net_control:__ custom rqt from __Design Special Topic 5__
+     * __rqt_neural_network_diagnostics:__ custom rqt from __Design Special Topic 5__
 
 ## Prerequisites
 
