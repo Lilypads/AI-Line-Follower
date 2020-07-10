@@ -23,7 +23,7 @@ a fast 2D robot simulator using the QT5 build system.
 
 ## Prerequisites
 
-### Install ROS Melodic:
+### Install ROS Melodic
 
  * Note that each platform might have a slightly different installation method.
  See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
@@ -57,7 +57,7 @@ The following method is specific for Ubuntu18.04(Bionic) platform.
         sudo rosdep init
         rosdep update
         
-### Install qt5:
+### Install qt5
 ```
 sudo apt-get install qt5-default
 ```
@@ -116,6 +116,9 @@ Run rqt on the forth terminal:
 source devel/setup.bash
 rqt --force-discover
 ```
+
+Select plugins:
+__Plugins > Design Special Topic 5__
 
 ### To check which node is currently running
 
