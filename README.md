@@ -2,9 +2,28 @@
 
 This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
 
+## About Enki (QT5)
+
+a fast 2D robot simulator using the QT5 build system.
+
+© 1999-2017 Stéphane Magnenat and others ([full list](AUTHORS))
+
+© 2017 Bernd Porr <mail@berndporr.me.uk>
+
+
+### License
+
+[GPL 2.0](LICENSE).
+
+## Content
+* __enki:__ enki library provided by the original project
+* __examples:__ projects built on enki library
+
+  * __ros_example:__ line following robot simulator using Enki library.
+
 ## Prerequisites
 
-Install ROS Melodic:
+### Install ROS Melodic:
 
  * Note that each platform might have a slightly different installation method.
  See http://wiki.ros.org/melodic/Installation for supported platforms and their installation method.
@@ -37,45 +56,76 @@ The following method is specific for Ubuntu18.04(Bionic) platform.
         sudo apt install python-rosdep
         sudo rosdep init
         rosdep update
-
-## To duplicate this repository to your PC
-First, install git
+        
+### Install qt5:
 ```
-sudo apt install git
-```
-To check that git was installed and its version
-```
-git --version
-```
-__This repository is dependent on submodules so when cloning use:__
-```
-git clone https://github.com/a2198699s/AI-Line-Follower --recurse-submodules
-```
-You will now get this repository in your ~/ or Home directory.
-To check that it is there:
-```
-cd ~
-ls
+sudo apt-get install qt5-default
 ```
 
-## How to start
+### Build Enki Library
 
-Instructions for using each section of the framework can be found in the respective directory.
+Change directory to the library directory:
+```
+cd .../AI-Line-Follower/enki
+```
+Build the library:
+```
+qmake
+make
+```
 
-To start running Enki simulation, see README in __simulators__ directory.
+### Build "ros_example"
+
+Change directory to the workspace directory:
+```
+cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+```
+Build the ROS package:
+```
+catkin_make
+```
+
+### Run the simulation
+
+Change directory to the workspace directory:
+```
+cd .../AI-Line-Follower/examples/ros_example/catkin_ws
+```
+
+Run roscore on one terminal:
+```
+roscore
+```
+*Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+c.*
 
 
-## Contents
+Run the enki simulation environment on the second terminal:
+```
+source devel/setup.bash
+rosrun enki_ros_pck robot
+```
 
-* __rqt_plugins:__ this directory contains the custom rqt GUI plugins used for the project
+Run the line react control node on the third terminal:
+```
+source devel/setup.bash
+rosrun enki_line_react_control line_react_control_node
+```
 
-* __ros_packages:__ this directory contains some misc. ROS packages useful for the project
+Run rqt on the forth terminal:
+```
+source devel/setup.bash
+rqt --force-discover
+```
 
-* __physical_robot:__ this directory contains work related with the development of the physical robot for the project
+### To check which node is currently running
 
-* __simulators:__ this directory contains simulator packages used in the framework
+On another terminal:
+```
+rosnode list
+```
+### To view communication between nodes using rqt_graph
 
-* __neural_networks:__ this directory contains the neural network implementations used in the project
-
-* __interface_specifications:__ this directory contains specifications for module interfaces for the framework
-
+On another terminal:
+```
+rosrun rqt_graph rqt_graph
+```
