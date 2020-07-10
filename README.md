@@ -85,7 +85,7 @@ Build the ROS package:
 catkin_make
 ```
 
-### Run the simulation
+## Run the simulation
 
 Change directory to the workspace directory:
 ```
