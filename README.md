@@ -97,12 +97,24 @@ Change directory to the workspace directory:
 cd .../AI-Line-Follower/catkin_ws
 ```
 
+### Method1: Roslaunch
+
+```
+source devel/setup.bash
+roslaunch enki_line_follow.launch
+```
+*Note: do expect one node to fail due to texture file(cc.png) not found when using roslaunch. To run the node again using rosrun on another terminal:
+```
+source devel setup.bash
+rosrun enki_ros_pck robot
+```
+
+### Method2: Manually run roscore and rosrun each node on seperate terminals
+
 Run roscore on one terminal:
 ```
 roscore
 ```
-*Note that you need to keep this running all the time on one terminal when running the simulation. You can exit this later by pressing ctrl+c.*
-
 
 Run the enki simulation environment on the second terminal:
 ```
