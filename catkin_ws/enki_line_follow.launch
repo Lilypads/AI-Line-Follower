@@ -1,0 +1,5 @@
+<launch>
+	<node name="line_react_control_node" pkg="enki_line_react_control" type="line_react_control_node" />
+	<node name="robot" pkg="enki_ros_pck" type="robot" />
+	<node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+</launch>
