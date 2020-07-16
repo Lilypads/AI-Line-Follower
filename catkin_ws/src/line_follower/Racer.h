@@ -35,10 +35,10 @@
 #ifndef __ENKI_RACER_H
 #define __ENKI_RACER_H
 
-#include <enki/robots/DifferentialWheeled.h>
-#include <enki/interactions/IRSensor.h>
-#include <enki/interactions/CircularCam.h>
-#include <enki/interactions/GroundSensor.h>
+#include <DifferentialWheeled.h>
+#include <IRSensor.h>
+#include <CircularCam.h>
+#include <GroundSensor.h>
 #include "parameters.h"
 
 namespace Enki

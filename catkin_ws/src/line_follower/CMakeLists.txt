@@ -15,26 +15,15 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-message(${CMAKE_CURRENT_SOURCE_DIR})
 
-#add_library(enki_lib)
-#target_link_libraries(enki_lib ${CMAKE_CURRENT_SOURCE_DIR}/../../../enki/libenki.a)
-
-set(enki_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/../enki/libenki.a)
-
-#find_package(enki REQUIRED)
-#include_directories(${enki_INCLUDE_DIR})
-#include_directories(${enki_INCLUDE_DIR}/enki)
+set(enki_LIBRARY /usr/local/lib/libenki.a)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt5 COMPONENTS OpenGL REQUIRED)
 
 set(SOURCES run.cpp Racer.cpp bandpass.cpp)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../enki)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../../)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+include_directories(/usr/local/include/enki)
 
 add_executable(robot ${SOURCES})
 target_link_libraries(robot ${catkin_LIBRARIES} ${enki_LIBRARY} Qt5::OpenGL Qt5::Widgets GL)
