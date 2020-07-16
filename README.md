@@ -3,8 +3,7 @@
 This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
 
 ## Content
-* __enki:__ enki library provided by the original project
-* __catkin_ws:__ line following robot simulator using Enki library.
+* __catkin_ws:__ line following robot simulator using Enki library catkin workspace directory
   * __src:__ directory containing different nodes
      * __enki_line_react_control:__ subscribe to camera view, publish robot velocity
      * __line_follower:__ enki environment and robot simulation
