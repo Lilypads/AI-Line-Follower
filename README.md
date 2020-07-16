@@ -67,23 +67,23 @@ The following method is specific for Ubuntu18.04(Bionic) platform.
 sudo apt-get install qt5-default
 ```
 
-### Build Enki Library
+### Install Enki Library
 
 Change directory to the library directory:
 ```
-cd .../AI-Line-Follower/enki
+cd /AI-Line-Follower/enki
 ```
 Build the library:
 ```
 qmake
-make
+sudo make install
 ```
 
 ## Build the repository workspace
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/catkin_ws
+cd /AI-Line-Follower/catkin_ws
 ```
 Build the ROS package:
 ```
@@ -94,7 +94,7 @@ catkin_make
 
 Change directory to the workspace directory:
 ```
-cd .../AI-Line-Follower/catkin_ws
+cd /AI-Line-Follower/catkin_ws
 ```
 
 ### Method1: Roslaunch
