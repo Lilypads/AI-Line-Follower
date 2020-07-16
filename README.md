@@ -71,9 +71,9 @@ sudo apt-get install qt5-default
 
 Change directory to the library directory:
 ```
-cd /AI-Line-Follower/enki
+cd AI-Line-Follower/enki
 ```
-Build the library:
+Make and install library:
 ```
 qmake
 sudo make install
@@ -83,7 +83,7 @@ sudo make install
 
 Change directory to the workspace directory:
 ```
-cd /AI-Line-Follower/catkin_ws
+cd AI-Line-Follower/catkin_ws
 ```
 Build the ROS package:
 ```
@@ -94,7 +94,7 @@ catkin_make
 
 Change directory to the workspace directory:
 ```
-cd /AI-Line-Follower/catkin_ws
+cd AI-Line-Follower/catkin_ws
 ```
 
 ### Method1: Roslaunch
