@@ -69,9 +69,11 @@ sudo apt-get install qt5-default
 
 ### Install Enki Library
 
+Clone enki library from https://github.com/berndporr/enki
+
 Change directory to the library directory:
 ```
-cd AI-Line-Follower/enki
+cd enki-master/enki
 ```
 Make and install library:
 ```
