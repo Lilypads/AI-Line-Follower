@@ -69,21 +69,21 @@ namespace Enki
 		//! Destructor
 		virtual ~LocalInteraction() { }
 		//! Init at each step
-		virtual void init(double dt, World* w) { }
+		virtual void init(double, World*) { }
 		//! Interact with object
 		/*!
 			\param dt time step
 			\param po object to interact with
 			\param w world where the interaction takes place
 		*/
-		virtual void objectStep(double dt, World* w, PhysicalObject *po) { }
+		virtual void objectStep(double, World*, PhysicalObject *) { }
 		//! Interact with walls
 		/*!
 			\param w world to which interact
 		*/
-		virtual void wallsStep(double dt, World* w) { }
+		virtual void wallsStep(double, World*) { }
 		//! Finalize at each step
-		virtual void finalize(double dt, World* w) { }
+		virtual void finalize(double, World*) { }
 		//! Return the range of the interaction
 		double getRange() const { return r; }
 	};
@@ -104,11 +104,11 @@ namespace Enki
 		//! Destructor
 		virtual ~GlobalInteraction() { }
 		//! Init at each step
-		virtual void init(double dt, World *w) { }
+		virtual void init(double, World *) { }
 		//! Interact with world
-		virtual void step(double dt, World *w) { }
+		virtual void step(double, World *) { }
 		//! Finalize at each step
-		virtual void finalize(double dt, World *w) { }
+		virtual void finalize(double, World *) { }
 	};
 }
 #endif

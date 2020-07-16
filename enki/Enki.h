@@ -42,8 +42,8 @@
 #include <QVector3D>
 #include <QUrl>
 
-#include <../../enki/Geometry.h>
-#include <../../enki/PhysicalEngine.h>
+#include <Geometry.h>
+#include <PhysicalEngine.h>
 
 /*!	\file Viewer.h
 	\brief Definition of the Qt-based viewer widget
@@ -63,7 +63,7 @@ namespace Enki
 		Q_OBJECT
 	
 	public:
-		const int timerPeriodMs;
+		int timerPeriodMs;
 		
 		class ViewerUserData : public PhysicalObject::UserData
 		{
@@ -130,6 +130,10 @@ namespace Enki
 		
 	protected:
 		World *world;
+
+		UpdatableCameraPose camera; //!< current camera pose
+		bool trackingView; //!< to know if camera is in tracking mode
+		CameraPose nonTrackingCamera; //!< copy of global camera when in tracking view
 		
 		GLuint helpWidget;
 		GLuint centerWidget;
@@ -138,7 +142,7 @@ namespace Enki
 		GLuint worldTexture;
 		GLuint wallTexture;
 		GLuint worldGroundTexture;
-		
+
 		typedef QMap<const std::type_info*, ViewerUserData*> ManagedObjectsMap;
 		typedef QMapIterator<const std::type_info*, ViewerUserData*> ManagedObjectsMapIterator;
 		ManagedObjectsMap managedObjects;
@@ -172,9 +176,6 @@ namespace Enki
 		bool mouseGrabbed;
 		QPoint mouseGrabPos;
 		double wallsHeight;
-		UpdatableCameraPose camera; //!< current camera pose
-		bool trackingView; //!< to know if camera is in tracking mode
-		CameraPose nonTrackingCamera; //!< copy of global camera when in tracking view
 	
 		PhysicalObject *pointedObject, *selectedObject;
 		QVector3D pointedPoint;
@@ -197,6 +198,9 @@ namespace Enki
 		PhysicalObject* getSelectedObject() const;
 		bool isTrackingActivated() const;
 		bool isMovableByPicking(PhysicalObject* object) const;
+		void setTimerPeriodMs(int _timerPeriodMs) {
+			timerPeriodMs = _timerPeriodMs;
+		}
 		
 		void setMovableByPicking(PhysicalObject* object, bool movable = true);
 		void removeExtendedAttributes(PhysicalObject* object);

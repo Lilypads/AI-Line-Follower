@@ -1208,12 +1208,7 @@ namespace Enki
 	void EnkiWidget::keyPressEvent(QKeyEvent* event)
 	{
 		if (event->key() == Qt::Key_F1)
-                        helpActivated();
-
-                if(event->key() == Qt::Key_Escape)
-                {
-                    qApp->quit(); //Sama added this
-                }
+			helpActivated();
 	}
 
 	void EnkiWidget::mousePressEvent(QMouseEvent *event)

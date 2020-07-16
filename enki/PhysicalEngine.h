@@ -321,9 +321,9 @@ namespace Enki
 			MOUSE_BUTTON_MIDDLE = 2
 		};
 		//! Called for robot if a mouse button is pressed while pointing to it, point is given in relative coordinates
-		virtual void mousePressEvent(unsigned button, double pointX, double pointY, double pointZ) {};
+		virtual void mousePressEvent(unsigned, double, double, double) {};
 		//! Called for a robot if a previously mouse button was pressed and is now released
-		virtual void mouseReleaseEvent(unsigned button) {};
+		virtual void mouseReleaseEvent(unsigned) {};
 		
 	private:		// setup methods
 		
@@ -346,23 +346,23 @@ namespace Enki
 		virtual void applyForces(double dt);
 		
 		//! The object collided with o during the current physical step, if o is null, it collided with walls. Called just before the object is de-interlaced
-		virtual void collisionEvent(PhysicalObject *o) {}
+		virtual void collisionEvent(PhysicalObject *) {}
 		
 		//! Initialize the object specific interactions, do nothing for PhysicalObject.
-		virtual void initLocalInteractions(double dt, World* w) { }
+		virtual void initLocalInteractions(double, World*) { }
 		//! Do the interactions with the other PhysicalObject, do nothing for PhysicalObject.
-		virtual void doLocalInteractions(double dt, World *w, PhysicalObject *o) { }
+		virtual void doLocalInteractions(double, World *, PhysicalObject *) { }
 		//! Do the interactions with the walls of world w, do nothing for PhysicalObject.
-		virtual void doLocalWallsInteraction(double dt, World* w) { }
+		virtual void doLocalWallsInteraction(double, World*) { }
 		//! All interactions are finished, do nothing for PhysicalObject.
-		virtual void finalizeLocalInteractions(double dt, World* w) { }
+		virtual void finalizeLocalInteractions(double, World*) { }
 
 		//! Initialize the global interactions, do nothing for PhysicalObject.
-		virtual void initGlobalInteractions(double dt, World* w) { }
+		virtual void initGlobalInteractions(double, World*) { }
 		//! Do the global interactions with the world, do nothing for PhysicalObject.
-		virtual void doGlobalInteractions(double dt, World* w) { }
+		virtual void doGlobalInteractions(double, World*) { }
 		//! All global interactions are finished, do nothing for PhysicalObject.
-		virtual void finalizeGlobalInteractions(double dt, World* w) { }
+		virtual void finalizeGlobalInteractions(double, World*) { }
 
 	private:		// physical actions
 		
@@ -514,7 +514,7 @@ namespace Enki
 	
 	protected:
 		//! Can implement world specific control. By default do nothing
-		virtual void controlStep(double dt) { }
+		virtual void controlStep(double) { }
 	};
 	
 	//! Fast random for use by Enki

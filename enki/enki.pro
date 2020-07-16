@@ -45,7 +45,7 @@ QT += opengl widgets
 
 CONFIG          += qt warn_on debug staticlib
 
-QMAKE_CXXFLAGS += -std=c++0x -march=native
+QMAKE_CXXFLAGS += -std=c++0x -march=native -Og
 
 headersDataFiles.path = /usr/local/include/enki
 headersDataFiles.files = *.h \
