@@ -2,19 +2,6 @@
 
 This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
 
-## About Enki (QT5)
-
-a fast 2D robot simulator using the QT5 build system.
-
-© 1999-2017 Stéphane Magnenat and others ([full list](AUTHORS))
-
-© 2017 Bernd Porr <mail@berndporr.me.uk>
-
-
-### License
-
-[GPL 2.0](LICENSE).
-
 ## Content
 * __enki:__ enki library provided by the original project
 * __catkin_ws:__ line following robot simulator using Enki library.
@@ -69,8 +56,10 @@ sudo apt-get install qt5-default
 
 ### Install Enki Library
 
-Clone enki library from https://github.com/berndporr/enki
-
+Clone the library:
+```
+git clone https://github.com/berndporr/enki
+```
 Change directory to the library directory:
 ```
 cd enki-master/enki
@@ -78,6 +67,7 @@ cd enki-master/enki
 Make and install library:
 ```
 qmake
+make
 sudo make install
 ```
 
