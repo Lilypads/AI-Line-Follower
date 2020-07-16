@@ -249,7 +249,7 @@ int main(int argc, char *argv[])
     srand(5);
     QApplication app(argc, argv);
     QImage gt;
-    gt = QGLWidget::convertToGLFormat(QImage("src/line_follower/cc.png")); //path from catkin_ws
+    gt = QGLWidget::convertToGLFormat(QImage("src/enki_ros_pck/cc.png")); //path from catkin_ws
     if (gt.isNull()) {
         fprintf(stderr,"Texture file not found\n");
         exit(1);
