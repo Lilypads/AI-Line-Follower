@@ -61,7 +61,7 @@ git clone https://github.com/berndporr/enki
 ```
 Change directory to the library directory:
 ```
-cd enki-master/enki
+cd enki/enki
 ```
 Make and install library:
 ```
