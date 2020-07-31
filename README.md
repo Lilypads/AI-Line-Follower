@@ -1,3 +1,5 @@
+<img src=“https://github.com/Lilypads/AI-Line-Follower/blob/master/line%20follower.png">
+
 # Line following robot with ROS/ENKI
 
 This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
