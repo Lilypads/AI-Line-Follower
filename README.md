@@ -1,4 +1,4 @@
-<img src=“https://github.com/Lilypads/AI-Line-Follower/blob/master/line%20follower.png">
+![Alt text](https://github.com/Lilypads/AI-Line-Follower/blob/master/line%20follower.png)
 
 # Line following robot with ROS/ENKI
 
