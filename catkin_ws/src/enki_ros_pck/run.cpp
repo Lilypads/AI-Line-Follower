@@ -41,6 +41,7 @@ It has also a camera which looks to the front and IR sensors
 #include "ros/ros.h" //these have to go first for some reason...
 #include "sensor_msgs/Image.h"
 #include "geometry_msgs/Twist.h"
+#include <ros/package.h>
 
 #include <Enki.h>
 #include <QApplication>
@@ -249,7 +250,12 @@ int main(int argc, char *argv[])
     srand(5);
     QApplication app(argc, argv);
     QImage gt;
-    gt = QGLWidget::convertToGLFormat(QImage("src/enki_ros_pck/cc.png")); //path from catkin_ws
+    //Creating combpath which directs to our texture file location
+	std::string pckpath = ros::package::getPath("enki_ros_pck"); //C++ string path to enki_ros_pck package folder
+	QString qtpckpath = QString::fromStdString(pckpath); //convert to QString
+	QString qtfile = QString().sprintf("/cc.png"); //convert /file_name.png to QString
+	QString combpath = qtpckpath + qtfile; //combine both QStrings
+    gt = QGLWidget::convertToGLFormat(QImage(combpath)); 
     if (gt.isNull()) {
         fprintf(stderr,"Texture file not found\n");
         exit(1);
