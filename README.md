@@ -81,7 +81,7 @@ sudo make install
 
 Change directory to the workspace directory:
 ```
-cd AI-Line-Follower/catkin_ws
+cd ROS-ENKI_robot_simulation/catkin_ws
 ```
 Build the ROS package:
 ```
@@ -92,7 +92,7 @@ catkin_make
 
 Change directory to the workspace directory:
 ```
-cd AI-Line-Follower/catkin_ws
+cd ROS-ENKI_robot_simulation/catkin_ws
 ```
 
 ### Method1: Roslaunch
