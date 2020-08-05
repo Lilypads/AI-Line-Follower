@@ -115,7 +115,8 @@ Run roscore on one terminal:
 roscore
 ```
 
-2.1 Line Following Example
+__2.1 Line Following Example__
+
 Run the enki simulation environment on the second terminal:
 ```
 source devel/setup.bash
@@ -128,7 +129,8 @@ source devel/setup.bash
 rosrun enki_line_react_control line_react_control_node
 ```
 
-2.2 Braitenberg Example
+__2.2 Braitenberg Example__
+
 Run the enki simulation environment on the second terminal:
 ```
 source devel/setup.bash
