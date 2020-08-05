@@ -137,7 +137,7 @@ source devel/setup.bash
 rosrun enki_ros_btb enki_ros_btb_node
 ```
 
-Run the brb react control node on the third terminal:
+Run the btb react control node on the third terminal:
 ```
 source devel/setup.bash
 rosrun enki_btb_react_control enki_btb_react_control_node
