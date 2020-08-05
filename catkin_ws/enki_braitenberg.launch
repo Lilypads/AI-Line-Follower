@@ -1,0 +1,5 @@
+<launch>
+	<node name="enki_btb_react_control_node" pkg="enki_btb_react_control" type="enki_btb_react_control_node" />
+	<node name="enki_ros_btb_node" pkg="enki_ros_btb" type="enki_ros_btb_node" />
+	<node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" />
+</launch>
