@@ -1,14 +1,19 @@
 ![Alt text](https://github.com/Lilypads/AI-Line-Follower/blob/master/line%20follower.png)
+![Alt text](https://github.com/Lilypads/AI-Line-Follower/blob/master/braitenberg.png)
 
-# Line following robot with ROS/ENKI
+# ROS/ENKI Robot Simulation
 
-This repository provides a ROS (Robot Operating System) based framework for simulating line following robot using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the line following robot.
+This repository provides ROS (Robot Operating System) based robot simulation packages using Enki Library. Together provided custom rqt plugins can be used for viewing and testing neural network implementations for the robots.
 
 ## Content
 * __catkin_ws:__ line following robot simulator using Enki library catkin workspace directory
+  * __enki_braitenberg.launch:__ launch file for running many nodes at once, Braitenberg example
+  * __enki_line_follow.launch:__ launch file for running many nodes at once, Line Following example
   * __src:__ directory containing different nodes
-     * __enki_line_react_control:__ subscribe to camera view, publish robot velocity
-     * __enki_ros_pck:__ enki environment and robot simulation
+     * __enki_btb_react_control:__ subscribe to camera view, publish robot velocity, Braitenberg example
+     * __enki_line_react_control:__ subscribe to camera view, publish robot velocity, Line Following example
+     * __enki_ros_btb:__ enki environment and robot simulation, Braitenberg example
+     * __enki_ros_pck:__ enki environment and robot simulation, Line Following example
      * __rqt_line_sensor_control:__ custom rqt from __Design Special Topic 5__
      * __rqt_line_sensor_view:__ custom rqt from __Design Special Topic 5__
      * __rqt_neural_net_control:__ custom rqt from __Design Special Topic 5__
@@ -92,9 +97,15 @@ cd AI-Line-Follower/catkin_ws
 
 ### Method1: Roslaunch
 
+For Line Following example,
 ```
 source devel/setup.bash
 roslaunch enki_line_follow.launch
+```
+For Braitenberg example,
+```
+source devel/setup.bash
+roslaunch enki_braitenberg.launch
 ```
 
 ### Method2: Manually run roscore and rosrun each node on seperate terminals
@@ -104,6 +115,7 @@ Run roscore on one terminal:
 roscore
 ```
 
+2.1 Line Following Example
 Run the enki simulation environment on the second terminal:
 ```
 source devel/setup.bash
@@ -115,6 +127,20 @@ Run the line react control node on the third terminal:
 source devel/setup.bash
 rosrun enki_line_react_control line_react_control_node
 ```
+
+2.2 Braitenberg Example
+Run the enki simulation environment on the second terminal:
+```
+source devel/setup.bash
+rosrun enki_ros_btb enki_ros_btb_node
+```
+
+Run the line react control node on the third terminal:
+```
+source devel/setup.bash
+rosrun enki_btb_react_control enki_btb_react_control_node
+```
+
 
 Run rqt on the forth terminal:
 ```
