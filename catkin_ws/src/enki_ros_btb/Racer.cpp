@@ -42,7 +42,7 @@ namespace Enki
         infraredSensorLeft(this, Vector(11, 10), 100, M_PI/200, 2, 1200, -0.9, 7, 20),
         infraredSensorRight(this, Vector(11, -10), 100, -M_PI/200, 2, 1200, -0.9, 7, 20),
 		camera(this, Vector(0, 0), 0, 0.0, M_PI/4, 50),
-		rgbcamera(this, Vector(11, 0), 0.5, 0.0, M_PI/8, 81) //robot, offset pos, height, orientation, halfFieldOfView, pixelCount
+		rgbcamera(this, Vector(11, 0), 0.5, 0.0, M_PI/4, 81) //robot, offset pos, height, orientation, halfFieldOfView, pixelCount
 
         //groundSensorLeft (this, Vector(10, SENSORLEFT), 0, 1, 1, 0),
         //groundSensorRight(this, Vector(10, SENSORRIGHT),0, 1, 1, 0)
