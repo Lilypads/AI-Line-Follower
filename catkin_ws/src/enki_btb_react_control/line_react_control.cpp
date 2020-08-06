@@ -46,7 +46,7 @@ void calculateMotorSpeeds(geometry_msgs::Twist& msg){
 	
 	if((sensor_values[8]/255.0) - (sensor_values[2]/255.0) != 0||(sensor_values[7]/255.0) -(sensor_values[3]/255.0) != 0||(sensor_values[6]/255.0) - (sensor_values[4]/255.0) != 0){
 		double error = (sensor_values[6]/255.0) + 2*(sensor_values[7]/255.0) + 3*(sensor_values[8]/255.0) - 3*(sensor_values[2]/255.0) - 2*(sensor_values[3]/255.0) - (sensor_values[4]/255.0);
-		msg.angular.z = -error*0.01;
+		msg.angular.z = -error*0.05;
 	}
 
 	else if(sensor_values_stuck/255.0 > 0.9) { // if it is almost white (0.0-1.0 is black-white)
