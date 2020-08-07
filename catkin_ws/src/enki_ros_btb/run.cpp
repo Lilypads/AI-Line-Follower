@@ -249,6 +249,10 @@ virtual void sceneCompletedHook()
 	msg.data.resize(9*4*9);	//need to equal step*width
    	camera_pub2.publish(msg);
 
+	//set robot back if it gets very close to food
+	if (sqrt((racer->pos.x - food->pos.x)*(racer->pos.x - food->pos.x)+(racer->pos.y - food->pos.y)*(racer->pos.y - food->pos.y))<16.0){	//robot half length + food radius = 10+5 = 15
+		racer->pos = Point(maxx/2, maxy/2 -30); // x and y of the start point
+	}
 
         ros::spinOnce();
 
